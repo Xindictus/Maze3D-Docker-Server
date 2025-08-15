@@ -39,12 +39,12 @@ cd maze_server
 ## Build and run via Docker
 
 ```shell
-# build the docker image with some tag ex. maze_http_server
-docker build -t maze_http_server:1.0.0 .
+# build the docker image with some tag ex. maze-http-server
+docker build -t maze-http-server:1.0.0 .
 
 # run the docker image with -d for detached
 # and -p "<host PORT>:<container PORT>" for port mappings
-docker run -d -p 8080:5050 -e HOST="http://localhost:8080" maze_http_server:1.0.0
+docker run -d -p 8080:5050 -e HOST="http://localhost:8080" maze-http-server:1.0.0
 ```
 
 Tested on python 3.12
