@@ -14,9 +14,7 @@ import multiprocessing
 # ===============================================
 #           Server Socket
 # ===============================================
-
 # bind - The server socket to bind
-import os
 from environs import Env
 
 env = Env()
@@ -34,7 +32,7 @@ bind = "0.0.0.0:5050"
 # A positive integer generally in the 2-4 x $(NUM_CORES) range
 
 workers = 1
-print('workers', workers)
+print("workers", workers)
 # worker_class - The type of workers to use
 # A string referring to one of the following bundled classes:
 # 1. sync
@@ -46,12 +44,12 @@ print('workers', workers)
 # for information on when you might want to choose one of the other
 # worker classes
 
-worker_class = 'gevent'
+worker_class = "gevent"
 
 # threads - The number of worker threads for handling requests. This will
 # run each worker with the specified number of threads.
 # A positive integer generally in the 2-4 x $(NUM_CORES) range
-threads = env('GUNICORN_THREADS', multiprocessing.cpu_count() * 2 + 1)
+threads = env("GUNICORN_THREADS", multiprocessing.cpu_count() * 2 + 1)
 
 # worker_connections - The maximum number of simultaneous clients
 # This setting only affects the Eventlet and Gevent worker types.
