@@ -1,14 +1,5 @@
 # Maze Experiment HTTP Server
 
-Instructions to install docker in a debian based system [here](/docker_install.md)
-
-## Download
-
-```shell
-git clone https://github.com/Dkoutrintzes/Maze3D-Docker-Server
-cd maze_server
-```
-
 ## Build and run locally
 
 1. Install `uv` dependency manager. Follow installation instructions [here](https://docs.astral.sh/uv/getting-started/installation/).
@@ -46,5 +37,3 @@ docker build -t maze-http-server:1.0.0 .
 # and -p "<host PORT>:<container PORT>" for port mappings
 docker run -d -p 8080:5050 -e HOST="http://localhost:8080" maze-http-server:1.0.0
 ```
-
-Tested on python 3.12

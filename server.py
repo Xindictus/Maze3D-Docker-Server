@@ -23,7 +23,7 @@ player = Queue(maxsize=1)
 
 config_data = None
 timeout = env("TIMEOUT", 10)
-server_host = env("HOST", "https://maze-server.app.orbitsystems.gr")
+server_host = env("HOST", "http://localhost:8080")
 
 
 def message_by(queue: Queue, data: dict):
